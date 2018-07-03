@@ -57,6 +57,22 @@
 		wp_enqueue_script('scripts');
 	}
 
-	add_action('wp_enqueue_scripts', 'dl_enqueue_scripts')
-	//////////////////////////////////////////////////////7
+	add_action('wp_enqueue_scripts', 'dl_enqueue_scripts');
+	/////////////////////////////////////////////////
+
+	////menu/////7
+
+	register_nav_menus(array(
+		'header-menu' => __('Header Menu'),
+		'social' => __('Social Menu')
+	));
+
+	//////////////////////////
+	////////////widget///////////7
+
+	if(function_exists(register_sidebar))
+		register_sidebar(array(
+			'name' => 'sidebar',
+			'id' => 'sidebar1'
+		));
 ?>

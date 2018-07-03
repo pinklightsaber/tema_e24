@@ -1,3 +1,17 @@
 <?php wp_head() ?> 
 
-<h1>Soy un header</h1>
+<?php if(has_nav_menu('header-menu')) { ?>
+
+  
+  <nav class="navbar navbar-default">
+    
+<?php 
+    wp_nav_menu(array(
+      'theme_location' => 'header-menu',
+      'container_class' => 'header_menu'
+    ));
+ ?>
+ 
+ </nav>
+
+<?php } ?>

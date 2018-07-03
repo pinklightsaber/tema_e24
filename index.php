@@ -13,7 +13,7 @@
 
 <!-- Título -->
 <h1>Mi primer tema</h1>
-
+<div class="container">
 <!-- Loop -->
 
 <?php if ( have_posts() ) { ?>
@@ -26,7 +26,9 @@
 <?php } else { ?>
 	No hay nada
 <?php } wp_reset_query(); ?>
+</div>
 
+<?php get_sidebar() ?>
 <!-- Llama al footer -->
 <?php get_footer() ?>
 	
